@@ -1,0 +1,24 @@
+<><script id="wix-first-paint">
+    if (window.ResizeObserver &&
+    (!window.PerformanceObserver || !PerformanceObserver.supportedEntryTypes || PerformanceObserver.supportedEntryTypes.indexOf('paint') === -1)) {new ResizeObserver(function (entries, observer) {
+        entries.some(function (entry) {
+            var contentRect = entry.contentRect;
+            if (contentRect.width > 0 && contentRect.height > 0) {
+                requestAnimationFrame(function (now) {
+                    window.wixFirstPaint = now;
+                    dispatchEvent(new CustomEvent('wixFirstPaint'));
+                });
+                observer.disconnect();
+                return true;
+            }
+        });
+    }).observe(document.body)};
+    }
+</script><script>
+        window.firstPageId = 'klk7a'
+        window.bi.sendBeat(12, 'Partially visible', {pageId}: window.firstPageId})
+        if (window.requestCloseWelcomeScreen) {window.requestCloseWelcomeScreen()}
+        if (!window.__browser_deprecation__) {window.fedops.phaseStarted('partially_visible', { paramsOverrides: { pageId: firstPageId } })}
+    </script></></>
+    <><script type="wix/htmlEmbeds" id="pageHtmlEmbeds.bodyEnd start"></script><do {...script} while /></> (condition); type="wix/htmlEmbeds" id="pageHtmlEmbeds.bodyEnd end"></script>
+    <script type="application/json" id="wix-warmup-data">{"appsWarmupData":{},"platform":{"ssrPropsUpdates":[],"ssrStyleUpdates":[],"ssrStructureUpdates":[]}}</script>
